@@ -1,238 +1,288 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TheFacebook — Old Profile</title>
-  <style>
-    body {
-      font-family: "Tahoma", sans-serif;
-      background-color: #e9ebee;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Pearson's Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background-color: #ffffff;
+        }
 
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background-color: #ffffff;
-      border: 1px solid #ccc;
-    }
+        #main-container {
+            width: 760px;
+            border: 1px solid #000000;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    /* HEADER */
-    .header {
-      background-color: #3b5998;
-      color: white;
-      font-size: 24px;
-      font-weight: bold;
-      padding: 10px;
-      text-align: left;
-    }
+        /* Дээд header – Facebook style хар хөх, илүү өндөр, өргөн */
+        #header-bar {
+            background-color: #3b5998; /* Facebook blue */
+            color: white;
+            padding: 16px 24px; /* Өндөр, өргөн нэмсэн */
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #000000;
+            border-radius: 4px; /* Зөөлөн ирмэг */
+        }
 
-    .menu {
-      font-size: 12px;
-      float: right;
-      margin-top: 5px;
-    }
+        #header-bar .text-lg {
+            font-size: 20px; /* Илүү том текст */
+        }
 
-    .menu a {
-      color: #dfe3ee;
-      text-decoration: none;
-      margin-left: 10px;
-    }
+        #header-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            margin-left: 12px;
+        }
 
-    .menu a:hover {
-      text-decoration: underline;
-    }
+        #header-bar a:hover {
+            text-decoration: underline;
+        }
 
-    /* SIDEBAR */
-    .sidebar {
-      width: 25%;
-      vertical-align: top;
-      padding: 10px;
-      background-color: #f7f7f7;
-      border-right: 1px solid #ccc;
-    }
+        a {
+            color: #3b5998;
+            text-decoration: none;
+            font-size: 12px;
+        }
 
-    .sidebar h4 {
-      background-color: #3b5998;
-      color: white;
-      padding: 5px;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 13px;
-    }
+        /* Section headers хар хөх өнгөтэй */
+        .section-header {
+            background-color: #3b5998;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 5px;
+            border: 1px solid #000000;
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .sidebar li {
-      padding: 5px 0;
-      border-bottom: 1px dotted #ccc;
-    }
+        .section-header a {
+            color: white;
+            font-weight: normal;
+            text-decoration: none;
+        }
 
-    /* MAIN */
-    .main {
-      width: 75%;
-      padding: 10px;
-      vertical-align: top;
-    }
+        .section-header a:hover {
+            text-decoration: underline;
+        }
 
-    .profile-title {
-      font-size: 16px;
-      background-color: #3b5998;
-      color: white;
-      padding: 5px;
-    }
+        .section-content {
+            padding: 5px;
+            border: 1px solid #000000;
+            font-size: 11px;
+            line-height: 1.4;
+        }
 
-    .content-table {
-      width: 100%;
-    }
+        .section-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
 
-    .left-block, .right-block {
-      vertical-align: top;
-      padding: 10px;
-    }
+        .section-content td {
+            padding: 1px 0;
+            vertical-align: top;
+        }
 
-    .left-block {
-      width: 40%;
-    }
+        .section-content .label {
+            font-weight: bold;
+            color: #666666;
+            width: 35%;
+        }
 
-    .right-block {
-      width: 60%;
-    }
+        .section-content .value {
+            color: #000000;
+            width: 65%;
+        }
 
-    .picture {
-      border: 1px solid #ccc;
-      padding: 5px;
-      text-align: center;
-    }
-
-    .picture img {
-      width: 100%;
-      border: 1px solid #aaa;
-    }
-
-    .info {
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .info b {
-      color: #3b5998;
-    }
-
-    .edit {
-      color: #3b5998;
-      font-size: 11px;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    /* FOOTER */
-    .footer {
-      background-color: #3b5998;
-      color: white;
-      text-align: center;
-      font-size: 12px;
-      padding: 5px;
-    }
-  </style>
+        @media (max-width: 768px) {
+            #main-container {
+                width: 95%;
+                margin: 10px auto;
+            }
+            #profile-layout {
+                flex-direction: column;
+            }
+            .column {
+                width: 100% !important;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <table border="0">
-    <!-- HEADER -->
-    <tr>
-      <td colspan="2" class="header">
-        [ thefacebook ]
-        <span class="menu">
-          <a href="#">home</a> |
-          <a href="#">search</a> |
-          <a href="#">global</a> |
-          <a href="#">social net</a> |
-          <a href="#">invite</a> |
-          <a href="#">faq</a> |
-          <a href="#">logout</a>
-        </span>
-      </td>
-    </tr>
 
-    <!-- BODY -->
-    <tr>
-      <!-- SIDEBAR -->
-      <td class="sidebar">
-        <h4>Quick Search</h4>
-        <input type="text" placeholder="search">
-        <button>Go</button>
-
-        <ul>
-          <li>My Profile (edit)</li>
-          <li>My Groups</li>
-          <li>My Friends</li>
-          <li>My Messages</li>
-          <li>My Mobile Info</li>
-          <li>My Account</li>
-          <li>My Privacy</li>
-        </ul>
-      </td>
-
-      <!-- MAIN CONTENT -->
-      <td class="main">
-        <div class="profile-title">
-          Scott Pearson's Profile (This is you)
+    <div id="main-container">
+        <!-- TOP HEADER BAR -->
+        <div id="header-bar">
+            <div style="width: 50px;"></div> 
+            <div class="text-lg">
+                [<span class="font-extrabold tracking-widest">thefacebook</span>]
+            </div>
+            <div class="flex">
+                <a href="#">home</a>
+                <a href="#">search</a>
+                <a href="#">global</a>
+                <a href="#">social net</a>
+                <a href="#">invite</a>
+                <a href="#">faq</a>
+                <a href="#">logout</a>
+            </div>
+        </div>
+        
+        <div class="p-3 text-xs flex justify-between">
+            <div style="color: #666666;">Scott Pearson's Profile (<a href="#">This is you</a>)</div>
+            <div class="font-bold text-black">Scranton</div>
         </div>
 
-        <table class="content-table">
-          <tr>
-            <!-- LEFT SIDE -->
-            <td class="left-block">
-              <div class="picture">
-                <img src="C:\Users\Acer\Downloads\Facebook-2004.jpg" alt="Profile Picture">
-              </div>
-              <br>
-              <button>Visualize My Friends</button><br><br>
-              <button>Edit My Profile</button><br><br>
-              <button>My Account Preferences</button>
-            </td>
+        <div id="profile-layout" class="flex p-3 gap-3">
+            <!-- LEFT COLUMN -->
+            <div class="column" style="width: 180px;">
+                <div class="mb-4">
+                    <div class="section-header" style="border: none; padding-left: 0;">quick search</div>
+                    <div class="flex items-center">
+                        <input type="text" placeholder="name" class="border border-black p-0.5 text-xs w-2/3">
+                        <button class="bg-gray-200 border border-black text-black text-xs px-1 ml-1 rounded-none">go</button>
+                    </div>
+                </div>
+                <div class="section-content border-0 p-0 text-xs">
+                    <div class="mb-1"><a href="#">My Profile</a> [<a href="#">edit</a>]</div>
+                    <div class="mb-1"><a href="#">My Group</a></div>
+                    <div class="mb-1"><a href="#">My Friends</a></div>
+                    <div class="mb-1"><a href="#">My Messages</a></div>
+                    <div class="mb-1"><a href="#">My Away Message</a></div>
+                    <div class="mb-1"><a href="#">My Mobile Info</a></div>
+                    <div class="mb-1"><a href="#">My Account</a></div>
+                    <div class="mb-1"><a href="#">My Privacy</a></div>
+                </div>
+            </div>
 
-            <!-- RIGHT SIDE -->
-            <td class="right-block">
-              <div class="info">
-                <b>Account Info:</b><br>
-                Name: Scott Pearson, BS <span class="edit">[edit]</span><br>
-                Member Since: January 12, 2005<br>
-                Last Update: February 3, 2005<br><br>
+            <!-- CENTER COLUMN -->
+            <div class="column flex-grow" style="width: 300px;">
+                <div class="mb-4">
+                    <div class="section-header">
+                        <div>Picture</div>
+                        <a href="#">[edit]</a>
+                    </div>
+                    <div class="section-content text-center">
+                        <img 
+                            src="Facebook-2004.jpg" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/200x200/cccccc/333333?text=Profile+Pic+2005'"
+                            alt="Scott Pearson's Profile Picture"
+                            class="w-full max-w-xs mx-auto my-2 border border-black"
+                            style="max-width: 200px; height: auto;"
+                        >
+                    </div>
+                </div>
 
-                <b>Basic Info:</b><br>
-                Email: pearsons2@scranton.edu <span class="edit">[edit]</span><br>
-                Status: Alumnus/Alumna<br>
-                Year: 2004<br>
-                Concentration: Computing Sciences, Mathematics<br><br>
+                <div class="mb-4">
+                    <div class="section-content border-t-0 text-xs flex flex-col items-start gap-1">
+                        <a href="#">Visualize My Friends</a>
+                        <a href="#">Edit My Profile</a>
+                        <a href="#">My Account Preferences</a>
+                        <a href="#">My Privacy Preferences</a>
+                    </div>
+                </div>
 
-                <b>Extended Info:</b><br>
-                Screenname: ScottiePP7<br>
-                Looking For: Friendship, Dating, A Relationship<br>
-                Interested In: Women<br>
-                Relationship Status: Single<br>
-                Political Views: Liberal<br>
-                Interests: Drinking, Football, Basketball, Tennis
-              </div>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+                <div class="mb-4">
+                    <div class="section-header">
+                        <div>Connection</div>
+                        <a href="#">[edit]</a>
+                    </div>
+                    <div class="section-content text-center py-2">
+                        This is you.
+                    </div>
+                </div>
 
-    <!-- FOOTER -->
-    <tr>
-      <td colspan="2" class="footer">
-        © 2004 TheFacebook — Student Network Prototype
-      </td>
-    </tr>
-  </table>
+                <div class="mb-4">
+                    <div class="section-header">
+                        <div>Access</div>
+                        <a href="#">[edit]</a>
+                    </div>
+                    <div class="section-content">
+                        Scott is currently logged in from a non-residential location.
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="section-header">
+                        <div>Other Schools</div>
+                        <a href="#">[edit]</a>
+                    </div>
+                    <div class="section-content">
+                        <!-- Content area -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="column" style="width: 250px;">
+                <div class="section-header">
+                    <div>Information</div>
+                    <a href="#">[edit]</a>
+                </div>
+                
+                <div class="section-content mb-4">
+                    <div class="font-bold mb-1">Account Info:</div>
+                    <table>
+                        <tr><td class="label">Name:</td><td class="value">Scott Pearson, BS</td></tr>
+                        <tr><td class="label">Member Since:</td><td class="value">January 12, 2005</td></tr>
+                        <tr><td class="label">Last Update:</td><td class="value">February 3, 2005</td></tr>
+                    </table>
+                </div>
+
+                <div class="section-content mb-4">
+                    <div class="font-bold mb-1 flex justify-between">
+                        Basic Info:
+                        <a href="#">[edit]</a>
+                    </div>
+                    <table>
+                        <tr><td class="label">Email:</td><td class="value"><a href="mailto:pearson2@scranton.edu">pearson2@scranton.edu</a></td></tr>
+                        <tr><td class="label">Status:</td><td class="value">Alumnus/Alumna</td></tr>
+                        <tr><td class="label">Sex:</td><td class="value">Male</td></tr>
+                        <tr><td class="label">Year:</td><td class="value">2004</td></tr>
+                        <tr><td class="label">Concentration:</td><td class="value"><a href="#">Computing Sciences</a>, <a href="#">Mathematics</a></td></tr>
+                        <tr><td class="label">Phone:</td><td class="value">570-499-4818</td></tr>
+                        <tr><td class="label">High School:</td><td class="value"><a href="#">Dunmore HS '00</a></td></tr>
+                    </table>
+                </div>
+
+                <div class="section-content mb-4">
+                    <div class="font-bold mb-1 flex justify-between">
+                        Extended Info:
+                        <a href="#">[edit]</a>
+                    </div>
+                    <table>
+                        <tr><td class="label">Screenname:</td><td class="value">ScottP97</td></tr>
+                        <tr><td class="label">Looking For:</td><td class="value">Friendship, Dating, A relationship, Random play, Whatever I can get</td></tr>
+                        <tr><td class="label">Interested In:</td><td class="value">Women</td></tr>
+                        <tr><td class="label">Relationship Status:</td><td class="value">Single</td></tr>
+                        <tr><td class="label">Political Views:</td><td class="value">Liberal</td></tr>
+                        <tr><td class="label">Interests:</td><td class="value">Drinking, Football, Basketball, Tennis, saying you'll have that</td></tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
 </body>
 </html>
-
