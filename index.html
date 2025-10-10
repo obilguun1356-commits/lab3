@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>TheFacebook — Old Profile</title>
+  <style>
+    body {
+      font-family: "Tahoma", sans-serif;
+      background-color: #e9ebee;
+      margin: 0;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+    }
+
+    /* HEADER */
+    .header {
+      background-color: #3b5998;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .menu {
+      font-size: 12px;
+      float: right;
+      margin-top: 5px;
+    }
+
+    .menu a {
+      color: #dfe3ee;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 25%;
+      vertical-align: top;
+      padding: 10px;
+      background-color: #f7f7f7;
+      border-right: 1px solid #ccc;
+    }
+
+    .sidebar h4 {
+      background-color: #3b5998;
+      color: white;
+      padding: 5px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .sidebar li {
+      padding: 5px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    /* MAIN */
+    .main {
+      width: 75%;
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    .profile-title {
+      font-size: 16px;
+      background-color: #3b5998;
+      color: white;
+      padding: 5px;
+    }
+
+    .content-table {
+      width: 100%;
+    }
+
+    .left-block, .right-block {
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    .left-block {
+      width: 40%;
+    }
+
+    .right-block {
+      width: 60%;
+    }
+
+    .picture {
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .picture img {
+      width: 100%;
+      border: 1px solid #aaa;
+    }
+
+    .info {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .info b {
+      color: #3b5998;
+    }
+
+    .edit {
+      color: #3b5998;
+      font-size: 11px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #3b5998;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="0">
+    <!-- HEADER -->
+    <tr>
+      <td colspan="2" class="header">
+        [ thefacebook ]
+        <span class="menu">
+          <a href="#">home</a> |
+          <a href="#">search</a> |
+          <a href="#">global</a> |
+          <a href="#">social net</a> |
+          <a href="#">invite</a> |
+          <a href="#">faq</a> |
+          <a href="#">logout</a>
+        </span>
+      </td>
+    </tr>
+
+    <!-- BODY -->
+    <tr>
+      <!-- SIDEBAR -->
+      <td class="sidebar">
+        <h4>Quick Search</h4>
+        <input type="text" placeholder="search">
+        <button>Go</button>
+
+        <ul>
+          <li>My Profile (edit)</li>
+          <li>My Groups</li>
+          <li>My Friends</li>
+          <li>My Messages</li>
+          <li>My Mobile Info</li>
+          <li>My Account</li>
+          <li>My Privacy</li>
+        </ul>
+      </td>
+
+      <!-- MAIN CONTENT -->
+      <td class="main">
+        <div class="profile-title">
+          Scott Pearson's Profile (This is you)
+        </div>
+
+        <table class="content-table">
+          <tr>
+            <!-- LEFT SIDE -->
+            <td class="left-block">
+              <div class="picture">
+                <img src="C:\Users\Acer\Downloads\Facebook-2004.jpg" alt="Profile Picture">
+              </div>
+              <br>
+              <button>Visualize My Friends</button><br><br>
+              <button>Edit My Profile</button><br><br>
+              <button>My Account Preferences</button>
+            </td>
+
+            <!-- RIGHT SIDE -->
+            <td class="right-block">
+              <div class="info">
+                <b>Account Info:</b><br>
+                Name: Scott Pearson, BS <span class="edit">[edit]</span><br>
+                Member Since: January 12, 2005<br>
+                Last Update: February 3, 2005<br><br>
+
+                <b>Basic Info:</b><br>
+                Email: pearsons2@scranton.edu <span class="edit">[edit]</span><br>
+                Status: Alumnus/Alumna<br>
+                Year: 2004<br>
+                Concentration: Computing Sciences, Mathematics<br><br>
+
+                <b>Extended Info:</b><br>
+                Screenname: ScottiePP7<br>
+                Looking For: Friendship, Dating, A Relationship<br>
+                Interested In: Women<br>
+                Relationship Status: Single<br>
+                Political Views: Liberal<br>
+                Interests: Drinking, Football, Basketball, Tennis
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td colspan="2" class="footer">
+        © 2004 TheFacebook — Student Network Prototype
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
