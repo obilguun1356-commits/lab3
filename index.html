@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scott Pearson's Profile</title>
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles to mimic the vintage 2005 "thefacebook" look */
         body {
             font-family: Verdana, Arial, sans-serif;
             background-color: #ffffff;
@@ -19,32 +21,31 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Дээд header – Facebook style хар хөх, илүү өндөр, өргөн */
         #header-bar {
-            background-color: #3b5998; /* Facebook blue */
+            background-color: #3b5998;
             color: white;
-            padding: 16px 24px; /* Өндөр, өргөн нэмсэн */
+            padding: 8px 12px;
             font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #000000;
-            border-radius: 4px; /* Зөөлөн ирмэг */
-        }
-
-        #header-bar .text-lg {
-            font-size: 20px; /* Илүү том текст */
         }
 
         #header-bar a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
-            font-size: 12px;
-            margin-left: 12px;
+            font-size: 11px;
+            margin-left: 10px;
         }
 
         #header-bar a:hover {
             text-decoration: underline;
+        }
+
+        /* Header text slightly bigger */
+        #header-bar .text-lg {
+            font-size: 16px;
         }
 
         a {
@@ -57,10 +58,8 @@
             text-decoration: underline;
         }
 
-        /* Section headers хар хөх өнгөтэй */
         .section-header {
             background-color: #3b5998;
-            color: white;
             font-size: 12px;
             font-weight: bold;
             padding: 2px 5px;
@@ -71,16 +70,6 @@
             align-items: center;
         }
 
-        .section-header a {
-            color: white;
-            font-weight: normal;
-            text-decoration: none;
-        }
-
-        .section-header a:hover {
-            text-decoration: underline;
-        }
-
         .section-content {
             padding: 5px;
             border: 1px solid #000000;
@@ -88,10 +77,11 @@
             line-height: 1.4;
         }
 
+        /* Table adjustments */
         .section-content table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 10px;
+            font-size: 10px; /* Жижгэрүүлсэн текст */
         }
 
         .section-content td {
@@ -102,12 +92,12 @@
         .section-content .label {
             font-weight: bold;
             color: #666666;
-            width: 35%;
+            width: 35%; /* label бага зэрэг өргөн */
         }
 
         .section-content .value {
             color: #000000;
-            width: 65%;
+            width: 65%; /* value үлдсэн */
         }
 
         @media (max-width: 768px) {
@@ -145,23 +135,26 @@
             </div>
         </div>
         
+        <!-- SUB-HEADER AND LOCATION -->
         <div class="p-3 text-xs flex justify-between">
             <div style="color: #666666;">Scott Pearson's Profile (<a href="#">This is you</a>)</div>
             <div class="font-bold text-black">Scranton</div>
         </div>
 
+        <!-- MAIN 3-COLUMN LAYOUT -->
         <div id="profile-layout" class="flex p-3 gap-3">
+            
             <!-- LEFT COLUMN -->
             <div class="column" style="width: 180px;">
                 <div class="mb-4">
-                    <div class="section-header" style="border: none; padding-left: 0;">quick search</div>
+                    <div class="section-header" style="border: none; padding-left: 0; background-color: transparent;">quick search</div>
                     <div class="flex items-center">
                         <input type="text" placeholder="name" class="border border-black p-0.5 text-xs w-2/3">
                         <button class="bg-gray-200 border border-black text-black text-xs px-1 ml-1 rounded-none">go</button>
                     </div>
                 </div>
                 <div class="section-content border-0 p-0 text-xs">
-                    <div class="mb-1"><a href="#">My Profile</a> [<a href="#">edit</a>]</div>
+                    <div class="mb-1"><a href="#">My Profile</a> [<a href="#" style="font-weight: normal;">edit</a>]</div>
                     <div class="mb-1"><a href="#">My Group</a></div>
                     <div class="mb-1"><a href="#">My Friends</a></div>
                     <div class="mb-1"><a href="#">My Messages</a></div>
@@ -250,7 +243,7 @@
                 <div class="section-content mb-4">
                     <div class="font-bold mb-1 flex justify-between">
                         Basic Info:
-                        <a href="#">[edit]</a>
+                        <a href="#" style="font-weight: normal;">[edit]</a>
                     </div>
                     <table>
                         <tr><td class="label">Email:</td><td class="value"><a href="mailto:pearson2@scranton.edu">pearson2@scranton.edu</a></td></tr>
@@ -262,11 +255,11 @@
                         <tr><td class="label">High School:</td><td class="value"><a href="#">Dunmore HS '00</a></td></tr>
                     </table>
                 </div>
-
+                
                 <div class="section-content mb-4">
                     <div class="font-bold mb-1 flex justify-between">
                         Extended Info:
-                        <a href="#">[edit]</a>
+                        <a href="#" style="font-weight: normal;">[edit]</a>
                     </div>
                     <table>
                         <tr><td class="label">Screenname:</td><td class="value">ScottP97</td></tr>
@@ -282,6 +275,11 @@
 
         </div>
         
+    </div>
+
+</body>
+</html>
+
     </div>
 
 </body>
